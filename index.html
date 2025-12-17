@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSK - Qualität System Kontrolle | Externí hodnocení kvality POCT</title>
+    <meta name="description" content="QSK poskytuje externí hodnocení kvality přístrojů pro lékaře. Certifikát uznávaný všemi pojišťovnami v ČR.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#home">QSK</a>
+                    <span class="logo-subtitle">Qualität System Kontrolle</span>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#jak-objednat">Jak objednat</a></li>
+                        <li><a href="#o-sluzbe">O službě</a></li>
+                        <li><a href="#terminy">Termíny cyklů</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Contact & Language -->
+                <div class="header-right">
+                    <div class="contact-info">
+                        <a href="tel:+420123456789" class="contact-item">
+                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+420 123 456 789</span>
+                        </a>
+                        <a href="mailto:info@qsk.cz" class="contact-item">
+                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@qsk.cz</span>
+                        </a>
+                    </div>
+
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn">
+                            CZ
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Login Form -->
+                    <div class="login-form">
+                        <form class="login" id="loginForm">
+                            <div class="login-input-group">
+                                <input type="text" id="username" placeholder="Jméno" class="login-input" required>
+                            </div>
+                            <div class="login-input-group">
+                                <input type="password" id="password" placeholder="Heslo" class="login-input" required>
+                            </div>
+                            <button type="submit" class="login-btn" aria-label="Přihlásit se">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Carousel (75%) -->
+                <div class="hero-carousel">
+                    <div class="carousel-container" id="carousel">
+                        <div class="carousel-slide active">
+                            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=800&fit=crop');"></div>
+                            <div class="slide-content">
+                                <h1 class="slide-title">Externí hodnocení kvality přístrojů</h1>
+                                <p class="slide-subtitle">Profesionální certifikace pro vaši laboratoř</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=800&fit=crop');"></div>
+                            <div class="slide-content">
+                                <h1 class="slide-title">Certifikát uznávaný všemi pojišťovnami</h1>
+                                <p class="slide-subtitle">Splňte požadavky na kvalitu s důvěryhodným partnerem</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=800&fit=crop');"></div>
+                            <div class="slide-content">
+                                <h1 class="slide-title">Přímá doprava do vaší ordinace</h1>
+                                <p class="slide-subtitle">Bez komplikací, bez zbytečných cest</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Předchozí">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Další">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                    </div>
+                </div>
+
+                <!-- Order Box (25%) -->
+                <div class="hero-order-box">
+                    <div class="order-box-content">
+                        <h2 class="order-box-title">Ještě nejste registrováni?</h2>
+                        <p class="order-box-text">Začněte během 2 minut.</p>
+                        <div class="order-box-buttons">
+                            <a href="#registrace" class="btn btn-primary">Registrace</a>
+                            <a href="#objednat" class="btn btn-secondary">Objednat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section class="usp-section">
+        <div class="container">
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div class="usp-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"></path>
+                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"></path>
+                            <path d="M12 21c0-1-1-3-3-3s-3 2-3 3 1 3 3 3 3-2 3-3"></path>
+                            <path d="M12 3c0 1-1 3-3 3S6 4 6 3s1-3 3-3 3 2 3 3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="usp-title">Uznávaný certifikát</h3>
+                    <p class="usp-text">Certifikát uznávají všechny pojišťovny v ČR.</p>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="usp-title">Certifikát na 1 rok</h3>
+                    <p class="usp-text">Není nutné provádět kontrolu 2x za rok.</p>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="usp-title">Přímá doprava</h3>
+                    <p class="usp-text">Vzorky doručíme přímo do Vaší ordinace.</p>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="usp-title">Nulová zátěž</h3>
+                    <p class="usp-text">Žádná jazyková bariéra. Platba v Kč. Vyřídíme za Vás.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">Novinky</h2>
+            <div class="news-grid" id="newsGrid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&h=400&fit=crop" alt="Nové termíny">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Nové termíny pro rok 2026</h3>
+                        <p class="news-excerpt">Otevřeli jsme registraci pro nové cykly externího hodnocení kvality. Přihlaste se již nyní a zajistěte si místo.</p>
+                        <a href="#novinky-2026" class="news-link">Více informací →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop" alt="6. cyklus">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Možnost přihlášení do 6. cyklu</h3>
+                        <p class="news-excerpt">Stále máte možnost přihlásit se do aktuálního 6. cyklu externího hodnocení kvality. Registrace probíhá online.</p>
+                        <a href="#cyklus-6" class="news-link">Přihlásit se →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Aktualizace">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Aktualizace certifikačního procesu</h3>
+                        <p class="news-excerpt">Zjednodušili jsme proces získání certifikátu. Nyní je vše ještě rychlejší a přehlednější.</p>
+                        <a href="#aktualizace" class="news-link">Zjistit více →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="jak-objednat">
+        <div class="container">
+            <h2 class="section-title">Jak to probíhá</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-connector"></div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Vyplnění objednávky</h3>
+                        <p class="step-description">Online formulář</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-connector"></div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Doručení vzorků</h3>
+                        <p class="step-description">Přímo do ordinace</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-connector"></div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Odeslání hodnot</h3>
+                        <p class="step-description">Zadání online</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-connector step-connector-last"></div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Vyhodnocení & certifikát</h3>
+                        <p class="step-description">Výsledky a dokumentace</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Logo & Company Info -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>QuickSeal</h3>
+                    </div>
+                    <div class="footer-info">
+                        <p><strong>IČO:</strong> 12345678</p>
+                        <p><strong>DIČ:</strong> CZ12345678</p>
+                        <p>Pražská 123<br>120 00 Praha 2<br>Česká republika</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Menu -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Menu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#jak-objednat">Jak objednat</a></li>
+                        <li><a href="#o-sluzbe">O službě</a></li>
+                        <li><a href="#terminy">Termíny cyklů</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Odkazy</h4>
+                    <ul class="footer-links">
+                        <li><a href="#obchodni-podminky">Obchodní podmínky</a></li>
+                        <li><a href="#gdpr">GDPR</a></li>
+                        <li><a href="#mapa-stranek">Mapa stránek</a></li>
+                        <li><a href="#novinky">Novinky</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter/Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Přihlaste se k odběru novinek a získejte aktuální informace o našich službách.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Váš e-mail" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn">Odeslat</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 QSK – Qualität System Kontrolle. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
