@@ -281,6 +281,39 @@ input, textarea {
     position: relative;
 }
 
+.lang-dropdown {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: #ffffff;
+    color: var(--color-text);
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    padding: 0.25rem 0;
+    min-width: 80px;
+    display: none;
+    z-index: 1200;
+}
+
+.lang-dropdown li a {
+    display: block;
+    padding: 0.4rem 0.75rem;
+    font-size: var(--font-size-sm);
+}
+
+.lang-dropdown li a:hover {
+    background-color: var(--color-gray-100);
+}
+
+.lang-dropdown li a.active {
+    font-weight: 600;
+}
+
+.language-selector.open .lang-dropdown {
+    display: block;
+}
+
 .lang-btn {
     display: flex;
     align-items: center;
@@ -457,6 +490,7 @@ input, textarea {
     flex-direction: column;
     justify-content: center;
     padding: var(--spacing-xl);
+    padding-left: calc(var(--spacing-xl) + 4rem);
     color: var(--color-white);
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.8) 0%, rgba(0, 82, 163, 0.6) 100%);
 }
@@ -467,6 +501,7 @@ input, textarea {
     margin-bottom: var(--spacing-md);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     line-height: 1.2;
+    max-width: 80%;
 }
 
 .slide-subtitle {
@@ -818,6 +853,19 @@ input, textarea {
     margin-bottom: var(--spacing-xl);
 }
 
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo-image {
+    width: 120px;
+    height: auto;
+    border-radius: 24px;
+    margin-bottom: var(--spacing-sm);
+}
+
 .footer-logo h3 {
     font-size: var(--font-size-2xl);
     font-weight: 700;
@@ -1066,6 +1114,7 @@ input, textarea {
 
     .slide-content {
         padding: var(--spacing-lg);
+        padding-left: var(--spacing-lg);
     }
 
     .slide-title {

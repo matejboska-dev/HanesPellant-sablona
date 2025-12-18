@@ -434,14 +434,40 @@ class ScrollAnimations {
 class LanguageSelector {
     constructor() {
         this.langBtn = document.getElementById('langBtn');
-        if (!this.langBtn) return;
+        this.dropdown = document.getElementById('langDropdown');
+        this.container = document.querySelector('.language-selector');
 
-        // For now, just a placeholder - dropdown functionality can be added later
+        if (!this.langBtn || !this.dropdown || !this.container) return;
+
+        this.init();
+    }
+
+    init() {
+        // Toggle dropdown
         this.langBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            // Language dropdown would open here
-            console.log('Language selector clicked');
+            const isOpen = this.container.classList.toggle('open');
+            this.langBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!this.container.contains(e.target)) {
+                this.close();
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                this.close();
+            }
+        });
+    }
+
+    close() {
+        this.container.classList.remove('open');
+        this.langBtn.setAttribute('aria-expanded', 'false');
     }
 }
 
