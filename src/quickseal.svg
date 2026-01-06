@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QuickSeal logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1EA7FD"/>
+      <stop offset="1" stop-color="#0E7CD6"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="120" y1="40" x2="180" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8F3FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square badge -->
+  <rect x="20" y="20" width="160" height="160" rx="28" fill="url(#bg)"/>
+  <!-- Paper sheet with folded corner (seal) -->
+  <path d="M60 55h60l35 35v55a15 15 0 0 1-15 15H60a15 15 0 0 1-15-15V70a15 15 0 0 1 15-15z" fill="#FFFFFF" opacity="0.98"/>
+  <!-- Folded corner -->
+  <path d="M120 55v35c0 8.284 6.716 15 15 15h35l-50-50z" fill="url(#fold)"/>
+  <!-- Check mark to suggest validation/certification -->
+  <path d="M78 120l18 18 36-36" stroke="#0E7CD6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Brand wordmark (optional minimal) -->
+  <g transform="translate(20,172)">
+    <rect width="160" height="6" rx="3" fill="#FF6B35" opacity="0.9"/>
+  </g>
+</svg>

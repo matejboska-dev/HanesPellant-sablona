@@ -205,8 +205,19 @@ input, textarea {
 .logo a {
     font-size: var(--font-size-2xl);
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     letter-spacing: -0.5px;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 36px;
+    width: auto;
+    display: block;
 }
 
 .logo-subtitle {
