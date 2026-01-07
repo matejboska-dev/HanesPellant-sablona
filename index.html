@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,11 +16,37 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-1 small">
+                <!-- Language Selector (Top bar) -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+                        CZ
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <ul class="lang-dropdown" id="langDropdown">
+                        <li><a href="index.html" data-lang="cz" class="active">CZ</a></li>
+                        <li><a href="index-sk.html" data-lang="sk">SK</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Top bar -->
+                <div class="contact-info">
+                    <a href="tel:+420123456789" class="contact-item">
+                        <i class="bi bi-telephone"></i>
+                        <span>+420 123 456 789</span>
+                    </a>
+                    <a href="mailto:info@qsk.cz" class="contact-item">
+                        <i class="bi bi-envelope"></i>
+                        <span>info@qsk.cz</span>
+                    </a>
+                </div>
+            </div>
             <div class="header-content">
                 <!-- Logo -->
                 <div class="logo">
                     <a href="#home" class="logo-link">
-                        <img src="src/qsk-logo.svg" alt="QSK logo" class="logo-image">
+                        <img src="logo_qsk_se_sloganem_DE.svg" alt="QSK logo" class="logo-image">
                     </a>
                     <span class="logo-subtitle">Qualität System Kontrolle</span>
                 </div>
@@ -36,60 +63,13 @@
 
                 <!-- Contact & Language -->
                 <div class="header-right">
-                    <div class="contact-info">
-                        <a href="tel:+420123456789" class="contact-item">
-                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <span>+420 123 456 789</span>
-                        </a>
-                        <a href="mailto:info@qsk.cz" class="contact-item">
-                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>info@qsk.cz</span>
-                        </a>
-                    </div>
-
-                    <!-- Language Selector -->
-                    <div class="language-selector">
-                        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
-                            CZ
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <ul class="lang-dropdown" id="langDropdown">
-                            <li><a href="index.html" data-lang="cz" class="active">CZ</a></li>
-                            <li><a href="index-sk.html" data-lang="sk">SK</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Login Form -->
-                    <div class="login-form">
-                        <form class="login" id="loginForm">
-                            <div class="login-input-group">
-                                <input type="text" id="username" placeholder="Jméno" class="login-input" required>
-                            </div>
-                            <div class="login-input-group">
-                                <input type="password" id="password" placeholder="Heslo" class="login-input" required>
-                            </div>
-                            <button type="submit" class="login-btn" aria-label="Přihlásit se">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-
-                    <!-- Mobile Menu Toggle -->
-                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
                 </div>
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
@@ -102,21 +82,24 @@
                 <div class="hero-carousel">
                     <div class="carousel-container" id="carousel">
                         <div class="carousel-slide active">
-                            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1582719471402-5f21eadafca5?w=1200&h=800&fit=crop');"></div>
+                            <div class="slide-image" style="background-image: url('https://images.pexels.com/photos/8413147/pexels-photo-8413147.jpeg');"></div>
                             <div class="slide-content">
                                 <h1 class="slide-title">Externí hodnocení kvality přístrojů</h1>
                                 <p class="slide-subtitle">Profesionální certifikace pro vaši laboratoř</p>
+                                <div class="mt-3">
+                                    <a href="#registrace" class="btn btn-primary">Začít registraci</a>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-slide">
-                            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=800&fit=crop');"></div>
+                            <div class="slide-image" style="background-image: url('https://images.pexels.com/photos/4963437/pexels-photo-4963437.jpeg');"></div>
                             <div class="slide-content">
                                 <h1 class="slide-title">Certifikát uznávaný všemi pojišťovnami</h1>
                                 <p class="slide-subtitle">Splňte požadavky na kvalitu s důvěryhodným partnerem</p>
                             </div>
                         </div>
                         <div class="carousel-slide">
-                            <div class="slide-image" style="background-image: url('https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg');"></div>
+                            <div class="slide-image" style="background-image: url('https://images.pexels.com/photos/6169186/pexels-photo-6169186.jpeg');"></div>
                             <div class="slide-content">
                                 <h1 class="slide-title">Přímá doprava do vaší ordinace</h1>
                                 <p class="slide-subtitle">Bez komplikací, bez zbytečných cest</p>
@@ -159,50 +142,27 @@
     <section class="usp-section">
         <div class="container">
             <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
-                <h2 class="section-title">Konkurenční výhody</h2>
-                <p class="section-subtitle">Proč zrovna my?</p>
+                <h2 class="section-title">Proč zrovna my?</h2>
+                <p class="section-subtitle">Vaše výhody s námi</p>
             </div>
             <div class="usp-grid">
                 <div class="usp-item">
-                    <div class="usp-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l7 4v6c0 5-7 10-7 10s-7-5-7-10V6l7-4z"></path>
-                            <path d="M9 12l2 2 4-4"></path>
-                        </svg>
-                    </div>
+                    <div class="usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
                     <h3 class="usp-title">Uznávaný certifikát</h3>
                     <p class="usp-text">Certifikát uznávají všechny pojišťovny v ČR.</p>
                 </div>
                 <div class="usp-item">
-                    <div class="usp-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
-                    </div>
-                    <h3 class="usp-title">Certifikát na 1 rok – spolu 1 rok</h3>
+                    <div class="usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
+                    <h3 class="usp-title">Certifikát platný 1 rok</h3>
                     <p class="usp-text">Není nutné provádět kontrolu 2× ročně.</p>
                 </div>
                 <div class="usp-item">
-                    <div class="usp-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11l5 5v5"></path>
-                            <path d="M7 15h8"></path>
-                            <path d="M7 10h6"></path>
-                        </svg>
-                    </div>
+                    <div class="usp-icon"><i class="bi bi-truck fs-1"></i></div>
                     <h3 class="usp-title">Přímá doprava</h3>
                     <p class="usp-text">Vzorky doručíme přímo do Vaší ordinace.</p>
                 </div>
                 <div class="usp-item">
-                    <div class="usp-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 18v-6a3 3 0 0 1 3-3h7"></path>
-                            <path d="M9 6h9a2 2 0 0 1 2 2v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8a2 2 0 0 1 2-2h2"></path>
-                        </svg>
-                    </div>
+                    <div class="usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
                     <h3 class="usp-title">Nulová zátěž</h3>
                     <p class="usp-text">Žádná jazyková bariéra. Platba v Kč. Vyřídíme za Vás.</p>
                 </div>
@@ -217,31 +177,31 @@
             <div class="news-grid" id="newsGrid">
                 <article class="news-card">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&h=400&fit=crop" alt="Nové termíny">
+                        <img src="https://images.pexels.com/photos/273153/pexels-photo-273153.jpeg" alt="Nové termíny">
                     </div>
                     <div class="news-content">
-                        <h3 class="news-title">Nové termíny pro rok 2026</h3>
-                        <p class="news-excerpt">Otevřeli jsme registraci pro nové cykly externího hodnocení kvality. Přihlaste se již nyní a zajistěte si místo.</p>
+                        <h3 class="news-title">Nové termíny</h3>
+                        <p class="news-excerpt">Nové termíny pro rok 2026. Otevřeli jsme registraci pro nové cykly externího hodnocení kvality. Přihlaste se již nyní a zajistěte si místo.</p>
                         <a href="#novinky-2026" class="news-link">Více informací →</a>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop" alt="6. cyklus">
+                        <img src="https://images.pexels.com/photos/3946013/pexels-photo-3946013.jpeg" alt="6. cyklus">
                     </div>
                     <div class="news-content">
-                        <h3 class="news-title">Možnost přihlášení do 6. cyklu</h3>
-                        <p class="news-excerpt">Stále máte možnost přihlásit se do aktuálního 6. cyklu externího hodnocení kvality. Registrace probíhá online.</p>
+                        <h3 class="news-title">6. cyklus</h3>
+                        <p class="news-excerpt">Možnost přihlášení do 6. cyklu. Stále máte možnost přihlásit se do aktuálního 6. cyklu externího hodnocení kvality. Registrace probíhá online.</p>
                         <a href="#cyklus-6" class="news-link">Přihlásit se →</a>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Aktualizace">
+                        <img src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg" alt="Aktualizace">
                     </div>
                     <div class="news-content">
-                        <h3 class="news-title">Aktualizace certifikačního procesu</h3>
-                        <p class="news-excerpt">Zjednodušili jsme proces získání certifikátu. Nyní je vše ještě rychlejší a přehlednější.</p>
+                        <h3 class="news-title">Aktualizace</h3>
+                        <p class="news-excerpt">Aktualizace certifikačního procesu. Zjednodušili jsme proces získání certifikátu. Nyní je vše ještě rychlejší a přehlednější.</p>
                         <a href="#aktualizace" class="news-link">Zjistit více →</a>
                     </div>
                 </article>
@@ -256,14 +216,7 @@
             <div class="process-timeline">
                 <div class="process-step">
                     <div class="step-connector"></div>
-                    <div class="step-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
-                    </div>
+                    <div class="step-icon"><i class="bi bi-ui-checks-grid fs-3"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Vyplnění objednávky</h3>
                         <p class="step-description">Online formulář</p>
@@ -271,13 +224,7 @@
                 </div>
                 <div class="process-step">
                     <div class="step-connector"></div>
-                    <div class="step-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11l5 5v5"></path>
-                            <path d="M7 15h8"></path>
-                            <path d="M7 10h6"></path>
-                        </svg>
-                    </div>
+                    <div class="step-icon"><i class="bi bi-truck fs-3"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Doručení vzorků</h3>
                         <p class="step-description">Přímo do ordinace</p>
@@ -285,13 +232,7 @@
                 </div>
                 <div class="process-step">
                     <div class="step-connector"></div>
-                    <div class="step-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 17v2a2 2 0 0 0 2 2h12"></path>
-                            <path d="M7 9l5-5 5 5"></path>
-                            <path d="M12 4v12"></path>
-                        </svg>
-                    </div>
+                    <div class="step-icon"><i class="bi bi-cloud-upload fs-3"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Odeslání hodnot</h3>
                         <p class="step-description">Zadání online</p>
@@ -299,16 +240,55 @@
                 </div>
                 <div class="process-step">
                     <div class="step-connector step-connector-last"></div>
-                    <div class="step-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <path d="M8 21l4-4 4 4"></path>
-                            <path d="M12 17v-3"></path>
-                        </svg>
-                    </div>
+                    <div class="step-icon"><i class="bi bi-award fs-3"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Vyhodnocení & certifikát</h3>
                         <p class="step-description">Výsledky a dokumentace</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laboratories Section -->
+    <section class="laboratories-section">
+        <div class="container">
+            <h2 class="section-title">Laboratoře</h2>
+            <div class="laboratories-grid">
+                <div class="laboratory-item">
+                    <div class="laboratory-image">
+                        <img src="https://images.pexels.com/photos/2280568/pexels-photo-2280568.jpeg" alt="Klinická biochemie">
+                    </div>
+                    <div class="laboratory-content">
+                        <h3 class="laboratory-title">Klinická biochemie</h3>
+                        <p class="laboratory-description">Kompletní portfolio vyšetření pro klinickou biochemii.</p>
+                    </div>
+                </div>
+                <div class="laboratory-item">
+                    <div class="laboratory-image">
+                        <img src="https://images.pexels.com/photos/4047146/pexels-photo-4047146.jpeg" alt="Hematologie">
+                    </div>
+                    <div class="laboratory-content">
+                        <h3 class="laboratory-title">Hematologie</h3>
+                        <p class="laboratory-description">Krevní obraz a specializovaná hematologická vyšetření.</p>
+                    </div>
+                </div>
+                <div class="laboratory-item">
+                    <div class="laboratory-image">
+                        <img src="https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg" alt="Mikrobiologie">
+                    </div>
+                    <div class="laboratory-content">
+                        <h3 class="laboratory-title">Mikrobiologie</h3>
+                        <p class="laboratory-description">Kultivace a identifikace mikroorganismů.</p>
+                    </div>
+                </div>
+                <div class="laboratory-item">
+                    <div class="laboratory-image">
+                        <img src="https://images.pexels.com/photos/5922094/pexels-photo-5922094.jpeg" alt="Imunologie">
+                    </div>
+                    <div class="laboratory-content">
+                        <h3 class="laboratory-title">Imunologie</h3>
+                        <p class="laboratory-description">Imunologické markery a specializovaná vyšetření.</p>
                     </div>
                 </div>
             </div>
@@ -322,8 +302,7 @@
                 <!-- Column 1: Logo & Company Info -->
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="src/quickseal.svg" alt="QuickSeal logo" class="footer-logo-image">
-                        <h3>QuickSeal</h3>
+                        <img src="logo_qs-cropped.svg" alt="QuickSeal logo" class="footer-logo-image">
                     </div>
                     <div class="footer-info">
                         <p><strong>IČO:</strong> 12345678</p>

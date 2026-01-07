@@ -259,6 +259,64 @@ input, textarea {
     width: 100%;
 }
 
+/* Desktop navbar centering */
+@media (min-width: 1025px) {
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align to left instead of space-between */
+        gap: 0;
+    }
+    .logo {
+        flex: 0 0 auto;
+        order: 1;
+        margin-right: var(--spacing-xl); /* Add space after logo */
+    }
+    .nav {
+        flex: 0 0 auto; /* Don't take full width */
+        display: flex;
+        justify-content: flex-start; /* Align nav items to left */
+        order: 2;
+        margin: 0;
+    }
+    .nav-list {
+        display: flex;
+        gap: var(--spacing-lg);
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .header-right {
+        flex: 1 1 auto; /* Take remaining space */
+        order: 3;
+        display: flex;
+        justify-content: flex-end; /* Push contact info to right */
+    }
+    /* Top bar: keep contact at the far right and prevent wrapping */
+    header .container > .d-flex {
+        width: 100%;
+    }
+    header .contact-info {
+        margin-left: auto;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+    /* Slight gutters on desktop header for nicer spacing */
+    .header > .container {
+        padding-left: var(--spacing-sm) !important;
+        padding-right: var(--spacing-sm) !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    header .logo {
+        margin-left: 0;
+    }
+    header .language-selector {
+        margin-left: 0;
+    }
+}
+
 .header-right {
     display: flex;
     align-items: center;
@@ -848,6 +906,74 @@ input, textarea {
 }
 
 /* ============================================
+   LABORATORIES SECTION
+   ============================================ */
+
+.laboratories-section {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-gray-50);
+}
+
+.laboratories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.laboratory-item {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.laboratory-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.laboratory-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--color-gray-200);
+}
+
+.laboratory-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.laboratory-item:hover .laboratory-image img {
+    transform: scale(1.1);
+}
+
+.laboratory-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.laboratory-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.laboratory-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 
@@ -871,10 +997,13 @@ input, textarea {
 }
 
 .footer-logo-image {
-    width: 120px;
+    width: 180px; /* resized QuickSeal logo */
     height: auto;
-    border-radius: 24px;
+    background-color: var(--color-white); /* white background strictly within logo bounds */
+    border-radius: 8px; /* slight rounded corners for better appearance */
+    padding: 8px; /* small padding to create white background border around logo */
     margin-bottom: var(--spacing-sm);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
 }
 
 .footer-logo h3 {
@@ -1021,13 +1150,17 @@ input, textarea {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .laboratories-grid {
+        grid-template-columns: 1fr;
+    }
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .process-timeline {
         flex-direction: column;
-        gap: var(--spacing-xl);
+        gap: var(--spacing-lg);
     }
 
     .step-connector {
@@ -1036,6 +1169,56 @@ input, textarea {
 
     .process-step {
         width: 100%;
+    }
+    /* Enhanced step card styling on tablet */
+    .process-step {
+        align-items: flex-start;
+        background: var(--color-white);
+        border: 1px solid var(--color-gray-200);
+        border-left: 6px solid var(--color-secondary);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-lg);
+        padding-left: calc(var(--spacing-xl) + 2rem);
+        position: relative;
+    }
+    .process-step .step-icon {
+        position: absolute;
+        left: var(--spacing-lg);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 64px;
+        height: 64px;
+    }
+    .process-step .step-content {
+        text-align: left;
+        max-width: 100%;
+    }
+    .process-step .step-title {
+        font-size: var(--font-size-xl);
+        margin-bottom: 0.25rem;
+    }
+    .process-step .step-description {
+        font-size: var(--font-size-base);
+    }
+
+    /* Tablet: show hamburger and collapse nav */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    .nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: var(--spacing-md);
+    }
+    .nav.active {
+        display: block;
+    }
+    .nav-list {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: flex-start;
     }
 }
 
@@ -1073,16 +1256,11 @@ input, textarea {
         gap: var(--spacing-sm);
     }
 
+    /* Keep contact info visible on mobile */
     .contact-info {
-        display: none;
-    }
-
-    .contact-info.active {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        order: 4;
-        margin-top: var(--spacing-sm);
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .login-form {
@@ -1161,12 +1339,37 @@ input, textarea {
         grid-template-columns: 1fr;
     }
 
+    .laboratories-grid {
+        grid-template-columns: 1fr;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
 
     .section-title {
         font-size: var(--font-size-2xl);
+    }
+
+    /* Process section: improved mobile visuals */
+    .process-timeline {
+        gap: var(--spacing-md);
+    }
+    .process-step {
+        padding: var(--spacing-md);
+        padding-left: calc(var(--spacing-lg) + 3.5rem);
+        border-left-width: 4px;
+    }
+    .process-step .step-icon {
+        width: 56px;
+        height: 56px;
+        left: var(--spacing-md);
+    }
+    .process-step .step-title {
+        font-size: var(--font-size-lg);
+    }
+    .process-step .step-description {
+        font-size: var(--font-size-sm);
     }
 }
 
