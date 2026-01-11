@@ -18,6 +18,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
@@ -31,7 +33,32 @@
     <header class="header" id="header">
 
         <div class="container">
-
+            <div class="d-flex justify-content-between align-items-center py-1 small">
+                <!-- Language Selector (Top bar) -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+                        SK
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <ul class="lang-dropdown" id="langDropdown">
+                        <li><a href="index.html" data-lang="cz">CZ</a></li>
+                        <li><a href="index-sk.html" data-lang="sk" class="active">SK</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Top bar -->
+                <div class="contact-info">
+                    <a href="tel:+421123456789" class="contact-item">
+                        <i class="bi bi-telephone"></i>
+                        <span>+421 123 456 789</span>
+                    </a>
+                    <a href="mailto:info@qsk.sk" class="contact-item">
+                        <i class="bi bi-envelope"></i>
+                        <span>info@qsk.sk</span>
+                    </a>
+                </div>
+            </div>
             <div class="header-content">
 
                 <!-- Logo -->
@@ -40,7 +67,7 @@
 
                     <a href="#home" class="logo-link">
 
-                        <img src="src/qsk-logo.svg" alt="QSK logo" class="logo-image">
+                        <img src="logo_qsk_se_sloganem_DE.svg" alt="QSK logo" class="logo-image">
 
                     </a>
 
@@ -74,113 +101,13 @@
 
                 <div class="header-right">
 
-                    <div class="contact-info">
-
-                        <a href="tel:+421123456789" class="contact-item">
-
-                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-
-                            </svg>
-
-                            <span>+421 123 456 789</span>
-
-                        </a>
-
-                        <a href="mailto:info@qsk.sk" class="contact-item">
-
-                            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-
-                                <polyline points="22,6 12,13 2,6"></polyline>
-
-                            </svg>
-
-                            <span>info@qsk.sk</span>
-
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- Language Selector -->
-
-                    <div class="language-selector">
-
-                        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
-
-                            SK
-
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                                <polyline points="6 9 12 15 18 9"></polyline>
-
-                            </svg>
-
-                        </button>
-
-                        <ul class="lang-dropdown" id="langDropdown">
-
-                            <li><a href="index.html" data-lang="cz">CZ</a></li>
-
-                            <li><a href="index-sk.html" data-lang="sk" class="active">SK</a></li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <!-- Login Form -->
-
-                    <div class="login-form">
-
-                        <form class="login" id="loginForm">
-
-                            <div class="login-input-group">
-
-                                <input type="text" id="username" placeholder="Meno" class="login-input" required>
-
-                            </div>
-
-                            <div class="login-input-group">
-
-                                <input type="password" id="password" placeholder="Heslo" class="login-input" required>
-
-                            </div>
-
-                            <button type="submit" class="login-btn" aria-label="Prihlásiť sa">
-
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-
-                                </svg>
-
-                            </button>
-
-                        </form>
-
-                    </div>
-
-
-
-                    <!-- Mobile Menu Toggle -->
-
-                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-
-                        <span></span>
-
-                        <span></span>
-
-                        <span></span>
-
-                    </button>
-
                 </div>
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
             </div>
 
@@ -206,7 +133,7 @@
 
                         <div class="carousel-slide active">
 
-                            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1582719471402-5f21eadafca5?w=1200&h=800&fit=crop');"></div>
+                            <div class="slide-image" style="background-image: url('https://images.pexels.com/photos/8413147/pexels-photo-8413147.jpeg');"></div>
 
                             <div class="slide-content">
 
@@ -214,13 +141,17 @@
 
                                 <p class="slide-subtitle">Profesionálna certifikácia pre vašu laboratóriu</p>
 
+                                <div class="mt-3">
+                                    <a href="#registrace" class="btn btn-primary">Začať registráciu</a>
+                                </div>
+
                             </div>
 
                         </div>
 
                         <div class="carousel-slide">
 
-                            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=800&fit=crop');"></div>
+                            <div class="slide-image" style="background-image: url('https://images.pexels.com/photos/4963437/pexels-photo-4963437.jpeg');"></div>
 
                             <div class="slide-content">
 
@@ -233,8 +164,8 @@
                         </div>
 
                         <div class="carousel-slide">
-                        
-                            <div class="slide-image" style="background-image: url('https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg');"></div>
+
+                            <div class="slide-image" style="background-image: url('https://images.pexels.com/photos/6169186/pexels-photo-6169186.jpeg');"></div>
 
                             <div class="slide-content">
 
@@ -320,9 +251,9 @@
 
             <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
 
-                <h2 class="section-title">Konkurenčné výhody</h2>
+                <h2 class="section-title">Prečo práve my?</h2>
 
-                <p class="section-subtitle">Prečo práve my?</p>
+                <p class="section-subtitle">Vaše výhody s nami</p>
 
             </div>
 
@@ -330,17 +261,7 @@
 
                 <div class="usp-item">
 
-                    <div class="usp-icon">
-
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                            <path d="M12 2l7 4v6c0 5-7 10-7 10s-7-5-7-10V6l7-4z"></path>
-
-                            <path d="M9 12l2 2 4-4"></path>
-
-                        </svg>
-
-                    </div>
+                    <div class="usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
 
                     <h3 class="usp-title">Uznávaný certifikát</h3>
 
@@ -350,23 +271,9 @@
 
                 <div class="usp-item">
 
-                    <div class="usp-icon">
+                    <div class="usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
 
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-
-                        </svg>
-
-                    </div>
-
-                    <h3 class="usp-title">Certifikát na 1 rok – spolu 1 rok</h3>
+                    <h3 class="usp-title">Certifikát platný 1 rok</h3>
 
                     <p class="usp-text">Nie je nutné vykonávať kontrolu 2× ročne.</p>
 
@@ -374,19 +281,7 @@
 
                 <div class="usp-item">
 
-                    <div class="usp-icon">
-
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11l5 5v5"></path>
-
-                            <path d="M7 15h8"></path>
-
-                            <path d="M7 10h6"></path>
-
-                        </svg>
-
-                    </div>
+                    <div class="usp-icon"><i class="bi bi-truck fs-1"></i></div>
 
                     <h3 class="usp-title">Priama doprava</h3>
 
@@ -396,17 +291,7 @@
 
                 <div class="usp-item">
 
-                    <div class="usp-icon">
-
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                            <path d="M9 18v-6a3 3 0 0 1 3-3h7"></path>
-
-                            <path d="M9 6h9a2 2 0 0 1 2 2v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8a2 2 0 0 1 2-2h2"></path>
-
-                        </svg>
-
-                    </div>
+                    <div class="usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
 
                     <h3 class="usp-title">Žiadna záťaž</h3>
 
@@ -436,15 +321,15 @@
 
                     <div class="news-image">
 
-                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&h=400&fit=crop" alt="Nové termíny">
+                        <img src="https://images.pexels.com/photos/273153/pexels-photo-273153.jpeg" alt="Nové termíny">
 
                     </div>
 
                     <div class="news-content">
 
-                        <h3 class="news-title">Nové termíny na rok 2026</h3>
+                        <h3 class="news-title">Nové termíny</h3>
 
-                        <p class="news-excerpt">Otvorili sme registráciu pre nové cykly externého hodnotenia kvality. Prihláste sa už teraz a zaistite si miesto.</p>
+                        <p class="news-excerpt">Nové termíny na rok 2026. Otvorili sme registráciu pre nové cykly externého hodnotenia kvality. Prihláste sa už teraz a zaistite si miesto.</p>
 
                         <a href="#novinky-2026" class="news-link">Viac informácií →</a>
 
@@ -456,15 +341,15 @@
 
                     <div class="news-image">
 
-                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop" alt="6. cyklus">
+                        <img src="https://images.pexels.com/photos/3946013/pexels-photo-3946013.jpeg" alt="6. cyklus">
 
                     </div>
 
                     <div class="news-content">
 
-                        <h3 class="news-title">Možnosť prihlásenia do 6. cyklu</h3>
+                        <h3 class="news-title">6. cyklus</h3>
 
-                        <p class="news-excerpt">Stále máte možnosť prihlásiť sa do aktuálneho 6. cyklu externého hodnotenia kvality. Registrácia prebieha online.</p>
+                        <p class="news-excerpt">Možnosť prihlásenia do 6. cyklu. Stále máte možnosť prihlásiť sa do aktuálneho 6. cyklu externého hodnotenia kvality. Registrácia prebieha online.</p>
 
                         <a href="#cyklus-6" class="news-link">Prihlásiť sa →</a>
 
@@ -476,15 +361,15 @@
 
                     <div class="news-image">
 
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Aktualizácia">
+                        <img src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg" alt="Aktualizácia">
 
                     </div>
 
                     <div class="news-content">
 
-                        <h3 class="news-title">Aktualizácia certifikačného procesu</h3>
+                        <h3 class="news-title">Aktualizácia</h3>
 
-                        <p class="news-excerpt">Zjednodušili sme proces získania certifikátu. Teraz je všetko ešte rýchlejšie a prehľadnejšie.</p>
+                        <p class="news-excerpt">Aktualizácia certifikačného procesu. Zjednodušili sme proces získania certifikátu. Teraz je všetko ešte rýchlejšie a prehľadnejšie.</p>
 
                         <a href="#aktualizace" class="news-link">Zistiť viac →</a>
 
@@ -514,23 +399,7 @@
 
                     <div class="step-connector"></div>
 
-                    <div class="step-icon">
-
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-
-                            <polyline points="14 2 14 8 20 8"></polyline>
-
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-
-                            <polyline points="10 9 9 9 8 9"></polyline>
-
-                        </svg>
-
-                    </div>
+                    <div class="step-icon"><i class="bi bi-ui-checks-grid fs-3"></i></div>
 
                     <div class="step-content">
 
@@ -546,19 +415,7 @@
 
                     <div class="step-connector"></div>
 
-                    <div class="step-icon">
-
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-
-                        </svg>
-
-                    </div>
+                    <div class="step-icon"><i class="bi bi-truck fs-3"></i></div>
 
                     <div class="step-content">
 
@@ -574,15 +431,7 @@
 
                     <div class="step-connector"></div>
 
-                    <div class="step-icon">
-
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-
-                        </svg>
-
-                    </div>
+                    <div class="step-icon"><i class="bi bi-cloud-upload fs-3"></i></div>
 
                     <div class="step-content">
 
@@ -598,17 +447,7 @@
 
                     <div class="step-connector step-connector-last"></div>
 
-                    <div class="step-icon">
-
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-
-                        </svg>
-
-                    </div>
+                    <div class="step-icon"><i class="bi bi-award fs-3"></i></div>
 
                     <div class="step-content">
 
@@ -642,9 +481,7 @@
 
                     <div class="footer-logo">
 
-                        <img src="src/quickseal.svg" alt="QuickSeal logo" class="footer-logo-image">
-
-                        <h3>QuickSeal</h3>
+                        <img src="logo_qs-cropped.svg" alt="QSK logo" class="footer-logo-image">
 
                     </div>
 
@@ -745,6 +582,8 @@
     </footer>
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="script.js"></script>
 
