@@ -17,29 +17,36 @@
     <header class="header" id="header">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center py-1 small">
-                <!-- Language Selector (Top bar) -->
-                <div class="language-selector">
-                    <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
-                        CZ
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <ul class="lang-dropdown" id="langDropdown">
-                        <li><a href="index.html" data-lang="cz" class="active">CZ</a></li>
-                        <li><a href="index-sk.html" data-lang="sk">SK</a></li>
-                    </ul>
-                </div>
-                <!-- Contact Top bar -->
-                <div class="contact-info">
-                    <a href="tel:+420123456789" class="contact-item">
-                        <i class="bi bi-telephone"></i>
-                        <span>+420 123 456 789</span>
-                    </a>
-                    <a href="mailto:info@qsk.cz" class="contact-item">
-                        <i class="bi bi-envelope"></i>
-                        <span>info@qsk.cz</span>
-                    </a>
+                <!-- Left side - empty or can add logo/brand -->
+                <div></div>
+                
+                <!-- Right side - Language & Contact -->
+                <div class="d-flex align-items-center gap-4">
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+                            CZ
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="lang-dropdown" id="langDropdown">
+                            <li><a href="index.html" data-lang="cz" class="active">CZ</a></li>
+                            <li><a href="index-sk.html" data-lang="sk">SK</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <a href="tel:+420123456789" class="contact-item">
+                            <i class="bi bi-telephone"></i>
+                            <span>+420 123 456 789</span>
+                        </a>
+                        <a href="mailto:info@qsk.cz" class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <span>info@qsk.cz</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="header-content">
@@ -48,17 +55,21 @@
                     <a href="#home" class="logo-link">
                         <img src="logo_qsk_se_sloganem_DE.svg" alt="QSK logo" class="logo-image">
                     </a>
-                    <span class="logo-subtitle">Qualität System Kontrolle</span>
                 </div>
 
                 <!-- Navigation -->
                 <nav class="nav" id="nav">
-                    <ul class="nav-list">
-                        <li><a href="#jak-objednat">Jak objednat</a></li>
-                        <li><a href="#o-sluzbe">O službě</a></li>
-                        <li><a href="#terminy">Termíny cyklů</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
+                    <div class="nav-content">
+                        <div class="nav-left">
+                            <span class="nav-home">Úvod:</span>
+                            <ul class="nav-list">
+                                <li><a href="#jak-objednat">Jak objednat</a></li>
+                                <li><a href="#o-sluzbe">O službě</a></li>
+                                <li><a href="#terminy">Termíny cyklů</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
 
                 <!-- Contact & Language -->
@@ -126,11 +137,22 @@
                 <!-- Order Box (25%) -->
                 <div class="hero-order-box">
                     <div class="order-box-content">
-                        <h2 class="order-box-title">Ještě nejste registrováni?</h2>
-                        
+                        <h2 class="order-box-title">Objednat</h2>
+                        <p class="order-box-subtitle">Externí hodnocení kvality</p>
+                        <div class="order-box-graphics">
+                            <div class="order-graphic">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                        </div>
                         <div class="order-box-buttons">
-                            <a href="#registrace" class="btn btn-primary">Registrace</a>
-                            <a href="#objednat" class="btn btn-secondary">Objednat</a>
+                            <a href="#objednat" class="btn btn-primary btn-arrow">
+                                <span>Dále</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -138,30 +160,115 @@
         </div>
     </section>
 
-    <!-- USP Section -->
+    <!-- USP Section 1 -->
     <section class="usp-section">
         <div class="container">
             <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
-                <h2 class="section-title">Proč zrovna my?</h2>
-                <p class="section-subtitle">Vaše výhody s námi</p>
+                <h2 class="section-title">Proč právě my 1</h2>
             </div>
             <div class="usp-grid">
-                <div class="usp-item">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
+                            <h3 class="usp-title">Uznávaný certifikát</h3>
+                        </div>
+                        <div class="card-back">
+                            <p class="usp-text">Certifikát uznávají všechny pojišťovny v ČR.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
+                            <h3 class="usp-title">Certifikát platný 1 rok</h3>
+                        </div>
+                        <div class="card-back">
+                            <p class="usp-text">Není nutné provádět kontrolu 2× ročně.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="usp-icon"><i class="bi bi-truck fs-1"></i></div>
+                            <h3 class="usp-title">Přímá doprava</h3>
+                        </div>
+                        <div class="card-back">
+                            <p class="usp-text">Vzorky doručíme přímo do Vaší ordinace.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
+                            <h3 class="usp-title">Nulová zátěž</h3>
+                        </div>
+                        <div class="card-back">
+                            <p class="usp-text">Žádná jazyková bariéra. Platba v Kč. Vyřídíme za Vás.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section 2 -->
+    <section class="additional-usp-section">
+        <div class="container">
+            <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
+                <h2 class="section-title">Proč právě my 2</h2>
+            </div>
+            <div class="additional-usp-grid">
+                <div class="additional-usp-item">
+                    <div class="additional-usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
+                    <h3 class="additional-usp-title">Uznávaný certifikát</h3>
+                    <p class="additional-usp-text">Certifikát uznávají všechny pojišťovny v ČR.</p>
+                </div>
+                <div class="additional-usp-item">
+                    <div class="additional-usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
+                    <h3 class="additional-usp-title">Certifikát platný 1 rok</h3>
+                    <p class="additional-usp-text">Není nutné provádět kontrolu 2× ročně.</p>
+                </div>
+                <div class="additional-usp-item">
+                    <div class="additional-usp-icon"><i class="bi bi-truck fs-1"></i></div>
+                    <h3 class="additional-usp-title">Přímá doprava</h3>
+                    <p class="additional-usp-text">Vzorky doručíme přímo do Vaší ordinace.</p>
+                </div>
+                <div class="additional-usp-item">
+                    <div class="additional-usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
+                    <h3 class="additional-usp-title">Nulová zátěž</h3>
+                    <p class="additional-usp-text">Žádná jazyková bariéra. Platba v Kč. Vyřídíme za Vás.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section 3 -->
+    <section class="usp-section">
+        <div class="container">
+            <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
+                <h2 class="section-title">Proč právě my 3</h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-item-simple">
                     <div class="usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
                     <h3 class="usp-title">Uznávaný certifikát</h3>
                     <p class="usp-text">Certifikát uznávají všechny pojišťovny v ČR.</p>
                 </div>
-                <div class="usp-item">
+                <div class="usp-item-simple">
                     <div class="usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
                     <h3 class="usp-title">Certifikát platný 1 rok</h3>
                     <p class="usp-text">Není nutné provádět kontrolu 2× ročně.</p>
                 </div>
-                <div class="usp-item">
+                <div class="usp-item-simple">
                     <div class="usp-icon"><i class="bi bi-truck fs-1"></i></div>
                     <h3 class="usp-title">Přímá doprava</h3>
                     <p class="usp-text">Vzorky doručíme přímo do Vaší ordinace.</p>
                 </div>
-                <div class="usp-item">
+                <div class="usp-item-simple">
                     <div class="usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
                     <h3 class="usp-title">Nulová zátěž</h3>
                     <p class="usp-text">Žádná jazyková bariéra. Platba v Kč. Vyřídíme za Vás.</p>
@@ -216,7 +323,7 @@
             <div class="process-timeline">
                 <div class="process-step">
                     <div class="step-connector"></div>
-                    <div class="step-icon"><i class="bi bi-ui-checks-grid fs-3"></i></div>
+                    <div class="step-icon"><i class="bi bi-clipboard-check fs-3"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Vyplnění objednávky</h3>
                         <p class="step-description">Online formulář</p>
@@ -250,51 +357,7 @@
         </div>
     </section>
 
-    <!-- Laboratories Section -->
-    <section class="laboratories-section">
-        <div class="container">
-            <h2 class="section-title">Laboratoře</h2>
-            <div class="laboratories-grid">
-                <div class="laboratory-item">
-                    <div class="laboratory-image">
-                        <img src="https://images.pexels.com/photos/2280568/pexels-photo-2280568.jpeg" alt="Klinická biochemie">
-                    </div>
-                    <div class="laboratory-content">
-                        <h3 class="laboratory-title">Klinická biochemie</h3>
-                        <p class="laboratory-description">Kompletní portfolio vyšetření pro klinickou biochemii.</p>
-                    </div>
-                </div>
-                <div class="laboratory-item">
-                    <div class="laboratory-image">
-                        <img src="https://images.pexels.com/photos/4047146/pexels-photo-4047146.jpeg" alt="Hematologie">
-                    </div>
-                    <div class="laboratory-content">
-                        <h3 class="laboratory-title">Hematologie</h3>
-                        <p class="laboratory-description">Krevní obraz a specializovaná hematologická vyšetření.</p>
-                    </div>
-                </div>
-                <div class="laboratory-item">
-                    <div class="laboratory-image">
-                        <img src="https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg" alt="Mikrobiologie">
-                    </div>
-                    <div class="laboratory-content">
-                        <h3 class="laboratory-title">Mikrobiologie</h3>
-                        <p class="laboratory-description">Kultivace a identifikace mikroorganismů.</p>
-                    </div>
-                </div>
-                <div class="laboratory-item">
-                    <div class="laboratory-image">
-                        <img src="https://images.pexels.com/photos/5922094/pexels-photo-5922094.jpeg" alt="Imunologie">
-                    </div>
-                    <div class="laboratory-content">
-                        <h3 class="laboratory-title">Imunologie</h3>
-                        <p class="laboratory-description">Imunologické markery a specializovaná vyšetření.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -302,7 +365,7 @@
                 <!-- Column 1: Logo & Company Info -->
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="logo_qs-cropped.svg" alt="QuickSeal logo" class="footer-logo-image">
+                        <img src="QuickSeal-BilyText.svg" alt="QuickSeal logo" class="footer-logo-image">
                     </div>
                     <div class="footer-info">
                         <p><strong>IČO:</strong> 12345678</p>
@@ -330,7 +393,6 @@
                         <li><a href="#obchodni-podminky">Obchodní podmínky</a></li>
                         <li><a href="#gdpr">GDPR</a></li>
                         <li><a href="#mapa-stranek">Mapa stránek</a></li>
-                        <li><a href="#novinky">Novinky</a></li>
                         <li><a href="#kontakt">Kontakt</a></li>
                     </ul>
                 </div>
