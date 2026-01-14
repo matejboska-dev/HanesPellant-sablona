@@ -174,8 +174,19 @@ class MobileMenu {
         this.nav = document.getElementById('nav');
         this.contactInfo = document.querySelector('.contact-info');
         this.header = document.getElementById('header');
+        this.overlay = document.getElementById('navOverlay');
 
-        if (!this.toggleBtn || !this.nav) return;
+        // Debug logging
+        console.log('MobileMenu constructor:');
+        console.log('Toggle button found:', !!this.toggleBtn);
+        console.log('Nav found:', !!this.nav);
+        console.log('Contact info found:', !!this.contactInfo);
+        console.log('Overlay found:', !!this.overlay);
+
+        if (!this.toggleBtn || !this.nav) {
+            console.error('Mobile menu elements not found!');
+            return;
+        }
 
         this.init();
     }
@@ -183,10 +194,16 @@ class MobileMenu {
     init() {
         this.toggleBtn.addEventListener('click', () => this.toggleMenu());
 
+        // Close menu when clicking overlay
+        if (this.overlay) {
+            this.overlay.addEventListener('click', () => this.closeMenu());
+        }
+
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!this.nav.contains(e.target) && 
                 !this.toggleBtn.contains(e.target) && 
+                !this.overlay?.contains(e.target) &&
                 this.nav.classList.contains('active')) {
                 this.closeMenu();
             }
@@ -211,8 +228,13 @@ class MobileMenu {
     }
 
     toggleMenu() {
+        console.log('Toggle menu clicked'); // Debug log
         this.toggleBtn.classList.toggle('active');
         this.nav.classList.toggle('active');
+        
+        if (this.overlay) {
+            this.overlay.classList.toggle('active');
+        }
         
         if (this.contactInfo) {
             this.contactInfo.classList.toggle('active');
@@ -221,14 +243,20 @@ class MobileMenu {
         // Prevent body scroll when menu is open
         if (this.nav.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
+            console.log('Menu opened'); // Debug log
         } else {
             document.body.style.overflow = '';
+            console.log('Menu closed'); // Debug log
         }
     }
 
     closeMenu() {
         this.toggleBtn.classList.remove('active');
         this.nav.classList.remove('active');
+        
+        if (this.overlay) {
+            this.overlay.classList.remove('active');
+        }
         
         if (this.contactInfo) {
             this.contactInfo.classList.remove('active');
@@ -472,6 +500,58 @@ class LanguageSelector {
 }
 
 // ============================================
+// PROCESS SECTION SCROLL ANIMATIONS
+// ============================================
+
+class ProcessScrollAnimations {
+    constructor() {
+        this.processSteps = document.querySelectorAll('.process-step');
+        this.timeline = document.querySelector('.process-timeline');
+        this.init();
+    }
+
+    init() {
+        if (!this.processSteps.length) return;
+
+        // Create intersection observer for scroll-triggered animations
+        const observerOptions = {
+            threshold: [0, 0.2, 0.4, 0.6, 0.8, 1.0],
+            rootMargin: '0px -50px 0px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const step = entry.target;
+                const index = Array.from(this.processSteps).indexOf(step);
+                
+                if (entry.isIntersecting) {
+                    // Calculate progress based on how much of the element is visible
+                    const progress = Math.min(entry.intersectionRatio, 1.0);
+                    
+                    // Add visible class for styling
+                    step.classList.add('visible');
+                    
+                    // Update progress indicator if it exists
+                    this.updateProgress(step, progress);
+                } else {
+                    step.classList.remove('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe each process step
+        this.processSteps.forEach(step => observer.observe(step));
+    }
+
+    updateProgress(step, progress) {
+        // You can add a progress bar or indicator here if needed
+        // For now, we'll just use the visible class for styling
+        const progressPercent = Math.round(progress * 100);
+        step.style.setProperty('--progress', `${progressPercent}%`);
+    }
+}
+
+// ============================================
 // INITIALIZE ALL FUNCTIONALITY
 // ============================================
 
@@ -496,6 +576,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize scroll animations
     new ScrollAnimations();
+
+    // Initialize process scroll animations
+    new ProcessScrollAnimations();
 
     // Initialize language selector
     new LanguageSelector();

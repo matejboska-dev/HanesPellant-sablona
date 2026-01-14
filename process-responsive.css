@@ -1,0 +1,392 @@
+/* Process Steps Responsive Override - Make all steps visible with same dimensions */
+
+/* Hero Section Responsive - Fix ugly layout on mobile/tablet */
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-lg) !important;
+        align-items: stretch !important;
+        justify-items: center !important;
+    }
+    
+    .hero-carousel {
+        min-height: 350px !important;
+        order: 1 !important;
+        width: 100% !important;
+    }
+    
+    .carousel-container {
+        min-height: 350px !important;
+        width: 100% !important;
+    }
+    
+    .slide-content {
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: var(--spacing-lg) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Hide carousel arrows on tablet */
+    .carousel-btn {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .carousel-btn-prev {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .carousel-btn-next {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    /* Remove carousel indicators completely on tablet */
+    .carousel-indicators {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .indicator {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .hero-order-box {
+        order: 2 !important;
+        min-height: 350px !important;
+        display: flex !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+    
+    .order-box-content {
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .order-box-graphics {
+        flex: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    /* Hide contact info on tablet */
+    .contact-info {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    /* Fix mobile menu visibility on tablet */
+    .mobile-menu-toggle {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+    
+    .nav.active {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        left: 0 !important;
+    }
+    
+    .mobile-menu-toggle.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-md) !important;
+        align-items: stretch !important;
+        justify-items: center !important;
+    }
+    
+    .hero-carousel {
+        min-height: 280px !important;
+        order: 1 !important;
+        width: 100% !important;
+    }
+    
+    .carousel-container {
+        min-height: 280px !important;
+        width: 100% !important;
+    }
+    
+    .slide-content {
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: var(--spacing-md) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Hide carousel arrows on mobile */
+    .carousel-btn {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .carousel-btn-prev {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .carousel-btn-next {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    /* Remove carousel indicators completely on mobile */
+    .carousel-indicators {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .indicator {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .hero-order-box {
+        order: 2 !important;
+        min-height: 280px !important;
+        display: flex !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+    
+    .order-box-content {
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        padding: var(--spacing-md) !important;
+        box-sizing: border-box !important;
+    }
+    
+    .order-box-graphics {
+        flex: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .order-box-title {
+        font-size: var(--font-size-lg) !important;
+    }
+    
+    .order-box-subtitle {
+        font-size: var(--font-size-sm) !important;
+    }
+    
+    .order-benefits {
+        gap: var(--spacing-sm) !important;
+    }
+    
+    .benefit-item {
+        font-size: var(--font-size-xs) !important;
+        gap: var(--spacing-xs) !important;
+    }
+    
+    .benefit-icon {
+        font-size: var(--font-size-sm) !important;
+    }
+    
+    .benefit-text {
+        font-size: var(--font-size-xs) !important;
+    }
+    
+    /* Hide contact info on mobile */
+    .contact-info {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    /* Fix mobile menu visibility on mobile */
+    .mobile-menu-toggle {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+    
+    .nav.active {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        left: 0 !important;
+    }
+    
+    .mobile-menu-toggle.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Tablet and Mobile - Force all process steps to be visible and same size */
+@media (max-width: 1024px) {
+    .process-step {
+        opacity: 1 !important;
+        transform: translateY(0px) !important;
+        width: 200px !important;
+        height: 120px !important;
+        min-height: 120px !important;
+        display: flex !important;
+        flex: 1 !important;
+        align-items: center !important;
+        background: var(--color-white) !important;
+        border: 1px solid var(--color-gray-200) !important;
+        border-left: 6px solid var(--color-secondary) !important;
+        border-radius: var(--radius-lg) !important;
+        box-shadow: var(--shadow-md) !important;
+        padding: var(--spacing-lg) !important;
+        padding-left: calc(var(--spacing-xl) + 2rem) !important;
+        position: relative !important;
+        transition: all var(--transition-base) !important;
+    }
+    
+    .step-connector {
+        display: none !important;
+    }
+    
+    .step-icon {
+        margin-bottom: 0 !important;
+        margin-right: var(--spacing-md) !important;
+        width: 40px !important;
+        height: 40px !important;
+        background: var(--color-secondary) !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: var(--color-white) !important;
+        font-size: var(--font-size-lg) !important;
+        box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3) !important;
+    }
+    
+    .step-content {
+        max-width: calc(100% - 4rem) !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    
+    .step-title {
+        font-size: var(--font-size-lg) !important;
+        margin-bottom: var(--spacing-xs) !important;
+    }
+    
+    .step-description {
+        font-size: var(--font-size-sm) !important;
+    }
+}
+
+/* Mobile - Slightly smaller but still consistent */
+@media (max-width: 768px) {
+    .process-step {
+        opacity: 1 !important;
+        transform: translateY(0px) !important;
+        width: 180px !important;
+        height: 100px !important;
+        min-height: 100px !important;
+        display: flex !important;
+        flex: 1 !important;
+        align-items: center !important;
+        background: var(--color-white) !important;
+        border: 1px solid var(--color-gray-200) !important;
+        border-left: 6px solid var(--color-secondary) !important;
+        border-radius: var(--radius-lg) !important;
+        box-shadow: var(--shadow-md) !important;
+        padding: var(--spacing-lg) !important;
+        position: relative !important;
+        transition: all var(--transition-base) !important;
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .step-connector {
+        display: none !important;
+    }
+    
+    .step-icon {
+        margin-bottom: var(--spacing-md) !important;
+        margin-right: 0 !important;
+        width: 50px !important;
+        height: 50px !important;
+        background: var(--color-secondary) !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: var(--color-white) !important;
+        font-size: var(--font-size-lg) !important;
+        box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3) !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .step-content {
+        max-width: 100% !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    
+    .step-title {
+        font-size: var(--font-size-lg) !important;
+        margin-bottom: var(--spacing-xs) !important;
+    }
+    
+    .step-description {
+        font-size: var(--font-size-sm) !important;
+    }
+}

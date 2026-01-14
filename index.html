@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="process-responsive.css">
 </head>
 <body>
     <!-- Header -->
@@ -84,6 +85,9 @@
             </div>
         </div>
     </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -127,11 +131,6 @@
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </button>
-                    <div class="carousel-indicators">
-                        <span class="indicator active" data-slide="0"></span>
-                        <span class="indicator" data-slide="1"></span>
-                        <span class="indicator" data-slide="2"></span>
-                    </div>
                 </div>
 
                 <!-- Order Box (25%) -->
@@ -140,10 +139,23 @@
                         <h2 class="order-box-title">Objednat</h2>
                         <p class="order-box-subtitle">Externí hodnocení kvality</p>
                         <div class="order-box-graphics">
-                            <div class="order-graphic">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
+                            <div class="order-benefits">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✓</div>
+                                    <span class="benefit-text">Okamžitý přístup k cyklům</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✓</div>
+                                    <span class="benefit-text">Přehledné statistiky a grafy</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✓</div>
+                                    <span class="benefit-text">Certifikát ihned po vyhodnocení</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✓</div>
+                                    <span class="benefit-text">Technická podpora v ceně</span>
+                                </div>
                             </div>
                         </div>
                         <div class="order-box-buttons">
