@@ -58,11 +58,11 @@
                     </a>
                 </div>
 
-                <!-- Navigation -->
+                <!-- Desktop Navigation -->
                 <nav class="nav" id="nav">
                     <div class="nav-content">
                         <div class="nav-left">
-                            <span class="nav-home">Úvod:</span>
+                            <span class="nav-home">Úvod</span>
                             <ul class="nav-list">
                                 <li><a href="#jak-objednat">Jak objednat</a></li>
                                 <li><a href="#o-sluzbe">O službě</a></li>
@@ -73,21 +73,46 @@
                     </div>
                 </nav>
 
-                <!-- Contact & Language -->
+                <!-- Contact & Language (Desktop) -->
                 <div class="header-right">
+                    <!-- Login Form -->
+                    <div class="login-form-inline">
+                        <input type="text" placeholder="Jméno" class="login-input-inline">
+                        <input type="password" placeholder="Heslo" class="login-input-inline">
+                    </div>
                 </div>
+                
                 <!-- Mobile Menu Toggle -->
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
-                </button>
+                </div>
             </div>
         </div>
     </header>
     
     <!-- Mobile Menu Overlay -->
-    <div class="nav-overlay" id="navOverlay"></div>
+    <nav class="menu" id="menu">
+        <button class="menu-close" id="menuClose" aria-label="Zavřít menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <a href="#home">Úvod</a>
+        <a href="#jak-objednat">Jak objednat</a>
+        <a href="#o-sluzbe">O službě</a>
+        <a href="#terminy">Termíny cyklů</a>
+        <a href="#faq">FAQ</a>
+        
+        <!-- Login Form in Mobile Menu -->
+        <div class="login-form-inline">
+            <input type="text" placeholder="Jméno" class="login-input-inline">
+            <input type="password" placeholder="Heslo" class="login-input-inline">
+            <button class="btn btn-primary mobile-login-btn">Přihlásit se</button>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -172,66 +197,11 @@
         </div>
     </section>
 
-    <!-- USP Section 1 -->
-    <section class="usp-section">
-        <div class="container">
-            <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
-                <h2 class="section-title">Proč právě my 1</h2>
-            </div>
-            <div class="usp-grid">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
-                            <h3 class="usp-title">Uznávaný certifikát</h3>
-                        </div>
-                        <div class="card-back">
-                            <p class="usp-text">Certifikát uznávají všechny pojišťovny v ČR.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
-                            <h3 class="usp-title">Certifikát platný 1 rok</h3>
-                        </div>
-                        <div class="card-back">
-                            <p class="usp-text">Není nutné provádět kontrolu 2× ročně.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="usp-icon"><i class="bi bi-truck fs-1"></i></div>
-                            <h3 class="usp-title">Přímá doprava</h3>
-                        </div>
-                        <div class="card-back">
-                            <p class="usp-text">Vzorky doručíme přímo do Vaší ordinace.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
-                            <h3 class="usp-title">Nulová zátěž</h3>
-                        </div>
-                        <div class="card-back">
-                            <p class="usp-text">Žádná jazyková bariéra. Platba v Kč. Vyřídíme za Vás.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- USP Section 2 -->
     <section class="additional-usp-section">
         <div class="container">
             <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
-                <h2 class="section-title">Proč právě my 2</h2>
+                <h2 class="section-title">Proč právě my</h2>
             </div>
             <div class="additional-usp-grid">
                 <div class="additional-usp-item">
@@ -253,37 +223,6 @@
                     <div class="additional-usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
                     <h3 class="additional-usp-title">Nulová zátěž</h3>
                     <p class="additional-usp-text">Žádná jazyková bariéra. Platba v Kč. Vyřídíme za Vás.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- USP Section 3 -->
-    <section class="usp-section">
-        <div class="container">
-            <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
-                <h2 class="section-title">Proč právě my 3</h2>
-            </div>
-            <div class="usp-grid">
-                <div class="usp-item-simple">
-                    <div class="usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
-                    <h3 class="usp-title">Uznávaný certifikát</h3>
-                    <p class="usp-text">Certifikát uznávají všechny pojišťovny v ČR.</p>
-                </div>
-                <div class="usp-item-simple">
-                    <div class="usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
-                    <h3 class="usp-title">Certifikát platný 1 rok</h3>
-                    <p class="usp-text">Není nutné provádět kontrolu 2× ročně.</p>
-                </div>
-                <div class="usp-item-simple">
-                    <div class="usp-icon"><i class="bi bi-truck fs-1"></i></div>
-                    <h3 class="usp-title">Přímá doprava</h3>
-                    <p class="usp-text">Vzorky doručíme přímo do Vaší ordinace.</p>
-                </div>
-                <div class="usp-item-simple">
-                    <div class="usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
-                    <h3 class="usp-title">Nulová zátěž</h3>
-                    <p class="usp-text">Žádná jazyková bariéra. Platba v Kč. Vyřídíme za Vás.</p>
                 </div>
             </div>
         </div>
@@ -335,7 +274,7 @@
             <div class="process-timeline">
                 <div class="process-step">
                     <div class="step-connector"></div>
-                    <div class="step-icon"><i class="bi bi-clipboard-check fs-3"></i></div>
+                    <div class="step-icon"><i class="bi bi-file-earmark-text fs-3"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Vyplnění objednávky</h3>
                         <p class="step-description">Online formulář</p>

@@ -170,21 +170,12 @@ class Carousel {
 
 class MobileMenu {
     constructor() {
-        this.toggleBtn = document.getElementById('mobileMenuToggle');
-        this.nav = document.getElementById('nav');
-        this.contactInfo = document.querySelector('.contact-info');
-        this.header = document.getElementById('header');
-        this.overlay = document.getElementById('navOverlay');
+        this.hamburger = document.getElementById('hamburger');
+        this.menu = document.getElementById('menu');
+        this.closeBtn = document.getElementById('menuClose');
 
-        // Debug logging
-        console.log('MobileMenu constructor:');
-        console.log('Toggle button found:', !!this.toggleBtn);
-        console.log('Nav found:', !!this.nav);
-        console.log('Contact info found:', !!this.contactInfo);
-        console.log('Overlay found:', !!this.overlay);
-
-        if (!this.toggleBtn || !this.nav) {
-            console.error('Mobile menu elements not found!');
+        if (!this.hamburger || !this.menu) {
+            console.error('Hamburger menu elements not found!');
             return;
         }
 
@@ -192,77 +183,32 @@ class MobileMenu {
     }
 
     init() {
-        this.toggleBtn.addEventListener('click', () => this.toggleMenu());
-
-        // Close menu when clicking overlay
-        if (this.overlay) {
-            this.overlay.addEventListener('click', () => this.closeMenu());
-        }
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!this.nav.contains(e.target) && 
-                !this.toggleBtn.contains(e.target) && 
-                !this.overlay?.contains(e.target) &&
-                this.nav.classList.contains('active')) {
-                this.closeMenu();
-            }
+        // Toggle menu with hamburger
+        this.hamburger.addEventListener('click', () => {
+            this.menu.classList.toggle('open');
         });
 
+        // Close menu with X button
+        if (this.closeBtn) {
+            this.closeBtn.addEventListener('click', () => {
+                this.menu.classList.remove('open');
+            });
+        }
+
         // Close menu when clicking on a link
-        const navLinks = this.nav.querySelectorAll('a');
-        navLinks.forEach(link => {
+        const menuLinks = this.menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    this.closeMenu();
-                }
+                this.menu.classList.remove('open');
             });
         });
 
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                this.closeMenu();
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.menu.classList.contains('open')) {
+                this.menu.classList.remove('open');
             }
         });
-    }
-
-    toggleMenu() {
-        console.log('Toggle menu clicked'); // Debug log
-        this.toggleBtn.classList.toggle('active');
-        this.nav.classList.toggle('active');
-        
-        if (this.overlay) {
-            this.overlay.classList.toggle('active');
-        }
-        
-        if (this.contactInfo) {
-            this.contactInfo.classList.toggle('active');
-        }
-
-        // Prevent body scroll when menu is open
-        if (this.nav.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-            console.log('Menu opened'); // Debug log
-        } else {
-            document.body.style.overflow = '';
-            console.log('Menu closed'); // Debug log
-        }
-    }
-
-    closeMenu() {
-        this.toggleBtn.classList.remove('active');
-        this.nav.classList.remove('active');
-        
-        if (this.overlay) {
-            this.overlay.classList.remove('active');
-        }
-        
-        if (this.contactInfo) {
-            this.contactInfo.classList.remove('active');
-        }
-
-        document.body.style.overflow = '';
     }
 }
 
