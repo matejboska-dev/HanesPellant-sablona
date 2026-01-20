@@ -511,16 +511,19 @@ box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.1);
     justify-content: center;
     width: 36px;
     height: 36px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-white);
     border-radius: var(--radius-sm);
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
     flex-shrink: 0;
+    box-shadow: var(--shadow-md);
+    border: none;
 }
 
 .login-btn:hover {
-    background-color: var(--color-primary-dark);
-    transform: scale(1.05);
+    background-color: var(--color-secondary-dark);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
 }
 
 /* Mobile Menu Overlay */
