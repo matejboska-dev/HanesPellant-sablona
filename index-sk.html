@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="process-responsive.css">
 </head>
 
 <body>
@@ -95,7 +95,16 @@
                 <!-- Contact & Language -->
 
                 <div class="header-right">
-
+                    <!-- Login Form -->
+                    <div class="login-form-inline">
+                        <input type="text" placeholder="Meno" class="login-input-inline">
+                        <input type="password" placeholder="Heslo" class="login-input-inline">
+                        <button class="login-btn" type="submit" aria-label="Prihlásiť sa">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
@@ -111,6 +120,28 @@
     </header>
 
 
+
+                <!-- Mobile Menu Overlay -->
+<nav class="menu" id="menu">
+    <button class="menu-close" id="menuClose" aria-label="Zavrieť menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+    <a href="#home">Úvod</a>
+    <a href="#jak-objednat">Ako objednať</a>
+    <a href="#o-sluzbe">O službe</a>
+    <a href="#terminy">Termíny cyklov</a>
+    <a href="#faq">FAQ</a>
+    
+    <!-- Login Form in Mobile Menu -->
+    <div class="login-form-inline">
+        <input type="text" placeholder="Meno" class="login-input-inline">
+        <input type="password" placeholder="Heslo" class="login-input-inline">
+        <button class="btn btn-primary mobile-login-btn">Prihlásiť sa</button>
+    </div>
+</nav>
 
     <!-- Hero Section -->
 
@@ -214,10 +245,23 @@
                         <h2 class="order-box-title">Objednať</h2>
                         <p class="order-box-subtitle">Externé hodnotenie kvality</p>
                         <div class="order-box-graphics">
-                            <div class="order-graphic">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
+                            <div class="order-benefits">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✓</div>
+                                    <span class="benefit-text">Okamžitý prístup k cyklom</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✓</div>
+                                    <span class="benefit-text">Prehľadné štatistiky a grafy</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✓</div>
+                                    <span class="benefit-text">Certifikát ihneď po vyhodnotení</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✓</div>
+                                    <span class="benefit-text">Technická podpora v cene</span>
+                                </div>
                             </div>
                         </div>
                         <div class="order-box-buttons">
@@ -239,43 +283,36 @@
 
 
 
-    <!-- USP Section -->
-
-    <section class="usp-section">
-
+    <!-- USP Section 2 -->
+    <section class="additional-usp-section">
         <div class="container">
-
             <div class="section-header" style="text-align:center; margin-bottom: 1.5rem;">
                 <h2 class="section-title">Prečo práve my</h2>
             </div>
-            <div class="usp-grid">
-                <div class="usp-item-simple">
-                    <div class="usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
-                    <h3 class="usp-title">Uznávaný certifikát</h3>
-                    <p class="usp-text">Certifikát uznávajú všetky poisťovne v SR.</p>
+            <div class="additional-usp-grid">
+                <div class="additional-usp-item">
+                    <div class="additional-usp-icon"><i class="bi bi-patch-check fs-1"></i></div>
+                    <h3 class="additional-usp-title">Uznávaný certifikát</h3>
+                    <p class="additional-usp-text">Certifikát uznávajú všetky poisťovne v SR.</p>
                 </div>
-                <div class="usp-item-simple">
-                    <div class="usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
-                    <h3 class="usp-title">Certifikát platný 1 rok</h3>
-                    <p class="usp-text">Nie je nutné vykonávať kontrolu 2× ročne.</p>
+                <div class="additional-usp-item">
+                    <div class="additional-usp-icon"><i class="bi bi-calendar-check fs-1"></i></div>
+                    <h3 class="additional-usp-title">Certifikát platný 1 rok</h3>
+                    <p class="additional-usp-text">Nie je nutné vykonávať kontrolu 2× ročne.</p>
                 </div>
-                <div class="usp-item-simple">
-                    <div class="usp-icon"><i class="bi bi-truck fs-1"></i></div>
-                    <h3 class="usp-title">Priama doprava</h3>
-                    <p class="usp-text">Vzorky doručíme priamo do vašej ambulancie.</p>
+                <div class="additional-usp-item">
+                    <div class="additional-usp-icon"><i class="bi bi-truck fs-1"></i></div>
+                    <h3 class="additional-usp-title">Priama doprava</h3>
+                    <p class="additional-usp-text">Vzorky doručíme priamo do vašej ambulancie.</p>
                 </div>
-                <div class="usp-item-simple">
-                    <div class="usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
-                    <h3 class="usp-title">Žiadna záťaž</h3>
-                    <p class="usp-text">Žiadna jazyková bariéra. Platba v EUR. Vybavíme za vás.</p>
+                <div class="additional-usp-item">
+                    <div class="additional-usp-icon"><i class="bi bi-shield-check fs-1"></i></div>
+                    <h3 class="additional-usp-title">Žiadna záťaž</h3>
+                    <p class="additional-usp-text">Žiadna jazyková bariéra. Platba v EUR. Vybavíme za vás.</p>
                 </div>
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- News Section -->
 
@@ -341,7 +378,7 @@
 
                         <p class="news-excerpt">Aktualizácia certifikačného procesu. Zjednodušili sme proces získania certifikátu. Teraz je všetko ešte rýchlejšie a prehľadnejšie.</p>
 
-                        <a href="#aktualizace" class="news-link">Zistiť viac →</a>
+                        <a href="#aktualizacia" class="news-link">Zistiť viac →</a>
 
                     </div>
 
@@ -369,7 +406,7 @@
 
                     <div class="step-connector"></div>
 
-                    <div class="step-icon"><i class="bi bi-clipboard-check fs-3"></i></div>
+                    <div class="step-icon"><i class="bi bi-file-earmark-text fs-3"></i></div>
 
                     <div class="step-content">
 
