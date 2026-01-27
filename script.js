@@ -1,5 +1,5 @@
 // ============================================
-// CAROUSEL FUNCTIONALITY
+// FUNKCE KARUSELU
 // ============================================
 
 class Carousel {
@@ -13,7 +13,7 @@ class Carousel {
         this.nextBtn = document.getElementById('carouselNext');
         this.currentSlide = 0;
         this.autoPlayInterval = null;
-        this.autoPlayDelay = 5000; // 5 seconds
+        this.autoPlayDelay = 5000; // 5 sekund
 
         this.init();
     }
@@ -21,7 +21,7 @@ class Carousel {
     init() {
         if (this.slides.length === 0) return;
 
-        // Event listeners
+        // Event listenery
         if (this.prevBtn) {
             this.prevBtn.addEventListener('click', () => this.prevSlide());
         }
@@ -30,28 +30,28 @@ class Carousel {
             this.nextBtn.addEventListener('click', () => this.nextSlide());
         }
 
-        // Indicator clicks
+        // Kliky na indikátory
         this.indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => this.goToSlide(index));
         });
 
-        // Auto-play
+        // Automatické přehrávání
         this.startAutoPlay();
 
-        // Pause on hover
+        // Pozastavení při najetí myší
         this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
         this.container.addEventListener('mouseleave', () => this.startAutoPlay());
 
-        // Touch/swipe support
+        // Podpora pro touch/swipe
         this.initTouchEvents();
     }
 
     showSlide(index) {
-        // Remove active class from all slides
+        // Odstranění aktivní třídy ze všech slidů
         this.slides.forEach(slide => slide.classList.remove('active'));
         this.indicators.forEach(indicator => indicator.classList.remove('active'));
 
-        // Add active class to current slide
+        // Přidání aktivní třídy k aktuálnímu slidu
         if (this.slides[index]) {
             this.slides[index].classList.add('active');
         }
@@ -113,7 +113,7 @@ class Carousel {
             this.handleSwipe();
         }, { passive: true });
 
-        // Mouse drag support
+        // Podpora pro myš drag
         let isDragging = false;
         let dragStartX = 0;
 
@@ -165,7 +165,7 @@ class Carousel {
 }
 
 // ============================================
-// MOBILE MENU FUNCTIONALITY
+// FUNKCE MOBILNÍHO MENU
 // ============================================
 
 class MobileMenu {
@@ -175,7 +175,7 @@ class MobileMenu {
         this.closeBtn = document.getElementById('menuClose');
 
         if (!this.hamburger || !this.menu) {
-            console.error('Hamburger menu elements not found!');
+            console.error('Prvky hamburger menu nebyly nalezeny!');
             return;
         }
 
@@ -183,19 +183,19 @@ class MobileMenu {
     }
 
     init() {
-        // Toggle menu with hamburger
+        // Přepnutí menu hamburgerem
         this.hamburger.addEventListener('click', () => {
             this.menu.classList.toggle('open');
         });
 
-        // Close menu with X button
+        // Zavření menu křížkem
         if (this.closeBtn) {
             this.closeBtn.addEventListener('click', () => {
                 this.menu.classList.remove('open');
             });
         }
 
-        // Close menu when clicking on a link
+        // Zavření menu při kliknutí na odkaz
         const menuLinks = this.menu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -203,7 +203,7 @@ class MobileMenu {
             });
         });
 
-        // Close menu on escape key
+        // Zavření menu klávesou Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.menu.classList.contains('open')) {
                 this.menu.classList.remove('open');
@@ -213,7 +213,7 @@ class MobileMenu {
 }
 
 // ============================================
-// STICKY HEADER ON SCROLL
+// PŘILEPENÁ HLAVIČKA PŘI SCROLLOVÁNÍ
 // ============================================
 
 class StickyHeader {
@@ -243,7 +243,7 @@ class StickyHeader {
 }
 
 // ============================================
-// LOGIN FORM HANDLING
+// ZPRACOVÁNÍ PŘIHLAŠOVACÍHO FORMULÁŘE
 // ============================================
 
 class LoginForm {
@@ -265,10 +265,10 @@ class LoginForm {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // Here you would typically send the data to a server
-        // For now, we'll just show a simple feedback
+        // Zde byste normálně odeslali data na server
+        // Prozatím jen ukážeme jednoduchou zpětnou vazbu
         if (username && password) {
-            // Simulate login process
+            // Simulace přihlašovacího procesu
             const loginBtn = this.form.querySelector('.login-btn');
             const originalHTML = loginBtn.innerHTML;
             
@@ -282,7 +282,7 @@ class LoginForm {
             setTimeout(() => {
                 loginBtn.innerHTML = originalHTML;
                 loginBtn.style.backgroundColor = '';
-                // In a real application, you would redirect or show success message
+                // V reálné aplikaci byste přesměrovali nebo zobrazili zprávu o úspěchu
                 console.log('Login attempt:', { username, password });
             }, 1500);
         }
@@ -290,7 +290,7 @@ class LoginForm {
 }
 
 // ============================================
-// NEWSLETTER FORM HANDLING
+// ZPRACOVÁNÍ NEWSLETTER FORMULÁŘE
 // ============================================
 
 class NewsletterForm {
@@ -317,7 +317,7 @@ class NewsletterForm {
             submitBtn.textContent = 'Odesílám...';
             submitBtn.disabled = true;
 
-            // Simulate API call
+            // Simulace API volání
             setTimeout(() => {
                 submitBtn.textContent = 'Odesláno ✓';
                 submitBtn.style.backgroundColor = '#10B981';
@@ -334,7 +334,7 @@ class NewsletterForm {
 }
 
 // ============================================
-// SMOOTH SCROLLING FOR ANCHOR LINKS
+// HLADKÉ SCROLLOVÁNÍ PRO KOTVY
 // ============================================
 
 class SmoothScroll {
@@ -347,7 +347,7 @@ class SmoothScroll {
             anchor.addEventListener('click', (e) => {
                 const href = anchor.getAttribute('href');
                 
-                // Skip empty hash or just #
+                // Přeskočit prázdný hash nebo jen #
                 if (href === '#' || href === '') return;
 
                 const target = document.querySelector(href);
@@ -367,7 +367,7 @@ class SmoothScroll {
 }
 
 // ============================================
-// INTERSECTION OBSERVER FOR ANIMATIONS
+// INTERSECTION OBSERVER PRO ANIMACE
 // ============================================
 
 class ScrollAnimations {
@@ -390,7 +390,7 @@ class ScrollAnimations {
             });
         }, observerOptions);
 
-        // Observe elements that should animate
+        // Sledování prvků které se mají animovat
         const animateElements = document.querySelectorAll('.usp-item, .news-card, .process-step');
         animateElements.forEach((el, index) => {
             el.style.opacity = '0';
@@ -402,7 +402,7 @@ class ScrollAnimations {
 }
 
 // ============================================
-// LANGUAGE SELECTOR (Placeholder)
+// VÝBĚR JAZYKA (Zástupce)
 // ============================================
 
 class LanguageSelector {
@@ -417,21 +417,21 @@ class LanguageSelector {
     }
 
     init() {
-        // Toggle dropdown
+        // Přepnutí dropdownu
         this.langBtn.addEventListener('click', (e) => {
             e.preventDefault();
             const isOpen = this.container.classList.toggle('open');
             this.langBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
 
-        // Close when clicking outside
+        // Zavření při kliknutí venku
         document.addEventListener('click', (e) => {
             if (!this.container.contains(e.target)) {
                 this.close();
             }
         });
 
-        // Close on Escape
+        // Zavření na Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 this.close();
@@ -446,7 +446,7 @@ class LanguageSelector {
 }
 
 // ============================================
-// PROCESS SECTION SCROLL ANIMATIONS
+// ANIMACE SCROLLOVÁNÍ SEKCE PROCESU
 // ============================================
 
 class ProcessScrollAnimations {
@@ -459,7 +459,7 @@ class ProcessScrollAnimations {
     init() {
         if (!this.processSteps.length) return;
 
-        // Create intersection observer for scroll-triggered animations
+        // Vytvoření intersection observer pro animace spouštěné scrollem
         const observerOptions = {
             threshold: [0, 0.2, 0.4, 0.6, 0.8, 1.0],
             rootMargin: '0px -50px 0px 0px'
@@ -471,13 +471,13 @@ class ProcessScrollAnimations {
                 const index = Array.from(this.processSteps).indexOf(step);
                 
                 if (entry.isIntersecting) {
-                    // Calculate progress based on how much of the element is visible
+                    // Výpočet progresu na základě viditelnosti prvku
                     const progress = Math.min(entry.intersectionRatio, 1.0);
                     
-                    // Add visible class for styling
+                    // Přidání viditelné třídy pro stylování
                     step.classList.add('visible');
                     
-                    // Update progress indicator if it exists
+                    // Aktualizace indikátoru progresu pokud existuje
                     this.updateProgress(step, progress);
                 } else {
                     step.classList.remove('visible');
@@ -485,56 +485,56 @@ class ProcessScrollAnimations {
             });
         }, observerOptions);
 
-        // Observe each process step
+        // Sledování každého kroku procesu
         this.processSteps.forEach(step => observer.observe(step));
     }
 
     updateProgress(step, progress) {
-        // You can add a progress bar or indicator here if needed
-        // For now, we'll just use the visible class for styling
+        // Můžete zde přidat progress bar nebo indikátor pokud potřebujete
+        // Prozatím jen použijeme viditelnou třídu pro stylování
         const progressPercent = Math.round(progress * 100);
         step.style.setProperty('--progress', `${progressPercent}%`);
     }
 }
 
 // ============================================
-// INITIALIZE ALL FUNCTIONALITY
+// INICIALIZACE VŠECH FUNKCÍ
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize carousel
+    // Inicializace karuselu
     new Carousel('carousel');
 
-    // Initialize mobile menu
+    // Inicializace mobilního menu
     new MobileMenu();
 
-    // Initialize sticky header
+    // Inicializace přilepené hlavičky
     new StickyHeader();
 
-    // Initialize login form
+    // Inicializace přihlašovacího formuláře
     new LoginForm();
 
-    // Initialize newsletter form
+    // Inicializace newsletter formuláře
     new NewsletterForm();
 
-    // Initialize smooth scrolling
+    // Inicializace hladkého scrollování
     new SmoothScroll();
 
-    // Initialize scroll animations
+    // Inicializace animací při scrollování
     new ScrollAnimations();
 
-    // Initialize process scroll animations
+    // Inicializace animací scrollování procesu
     new ProcessScrollAnimations();
 
-    // Initialize language selector
+    // Inicializace výběru jazyka
     new LanguageSelector();
 
-    // Add loading class removal
+    // Přidání odstranění loading třídy
     document.body.classList.add('loaded');
 });
 
 // ============================================
-// UTILITY: DEBOUNCE FUNCTION
+// POMOCNÁ FUNKCE: DEBOUNCE
 // ============================================
 
 function debounce(func, wait) {
@@ -550,11 +550,11 @@ function debounce(func, wait) {
 }
 
 // ============================================
-// HANDLE WINDOW RESIZE
+// ZPRACOVÁNÍ ZMĚNY VELIKOSTI OKNA
 // ============================================
 
 window.addEventListener('resize', debounce(() => {
-    // Any resize-specific logic can go here
-    // For example, recalculating carousel dimensions if needed
+    // Jakákoliv logika pro změnu velikosti může být zde
+    // Například přepočítání rozměrů karuselu pokud potřebujete
 }, 250));
 

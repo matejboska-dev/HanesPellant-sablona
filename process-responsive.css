@@ -1,6 +1,6 @@
-/* Process Steps Responsive Override - Make all steps visible with same dimensions */
+/* Responzivní přepsání procesních kroků - Zviditelnit všechny kroky se stejnými rozměry */
 
-/* Hero Section Responsive - Fix ugly layout on mobile/tablet */
+/* Responzivní hero sekce - Oprava ošklivého layoutu na mobilu/tabletu */
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr !important;
@@ -32,7 +32,7 @@
         box-sizing: border-box !important;
     }
     
-    /* Hide carousel arrows on tablet */
+    /* Skrytí šipek karuselu na tabletu */
     .carousel-btn {
         display: none !important;
         opacity: 0 !important;
@@ -54,7 +54,7 @@
         pointer-events: none !important;
     }
     
-    /* Remove carousel indicators completely on tablet */
+    /* Kompletní odstranění indikátorů karuselu na tabletu */
     .carousel-indicators {
         display: none !important;
         opacity: 0 !important;
@@ -94,7 +94,7 @@
         width: 100% !important;
     }
     
-    /* Hide contact info on tablet */
+    /* Skrytí kontaktních informací na tabletu */
     .contact-info {
         display: none !important;
         opacity: 0 !important;
@@ -102,7 +102,7 @@
         pointer-events: none !important;
     }
     
-    /* Fix mobile menu visibility on tablet */
+    /* Oprava viditelnosti mobilního menu na tabletu */
     .mobile-menu-toggle {
         display: flex !important;
         opacity: 1 !important;
@@ -154,7 +154,7 @@
         box-sizing: border-box !important;
     }
     
-    /* Hide carousel arrows on mobile */
+    /* Skrytí šipek karuselu na mobilu */
     .carousel-btn {
         display: none !important;
         opacity: 0 !important;
@@ -176,7 +176,7 @@
         pointer-events: none !important;
     }
     
-    /* Remove carousel indicators completely on mobile */
+    /* Kompletní odstranění indikátorů karuselu na mobilu */
     .carousel-indicators {
         display: none !important;
         opacity: 0 !important;
@@ -242,7 +242,7 @@
         font-size: var(--font-size-xs) !important;
     }
     
-    /* Hide contact info on mobile */
+    /* Skrytí kontaktních informací na mobilu */
     .contact-info {
         display: none !important;
         opacity: 0 !important;
@@ -250,7 +250,7 @@
         pointer-events: none !important;
     }
     
-    /* Fix mobile menu visibility on mobile */
+    /* Oprava viditelnosti mobilního menu na mobilu */
     .mobile-menu-toggle {
         display: flex !important;
         opacity: 1 !important;
@@ -271,7 +271,7 @@
     }
 }
 
-/* Tablet and Mobile - Force all process steps to be visible and same size */
+/* Tablet a Mobil - Vynutit viditelnost všech procesních kroků se stejnou velikostí */
 @media (max-width: 1024px) {
     .process-step {
         opacity: 1 !important;
@@ -330,7 +330,7 @@
     }
 }
 
-/* Mobile - Slightly smaller but still consistent */
+/* Mobil - O něco menší ale stále konzistentní */
 @media (max-width: 768px) {
     .process-step {
         opacity: 1 !important;
